@@ -2,7 +2,7 @@
   "name": "fabric_defects",
   "version": "0.1.0",
   "private": true,
-  "homepage": "",
+  "homepage": "https://karpenkods.github.io/fabric_defects/",
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
