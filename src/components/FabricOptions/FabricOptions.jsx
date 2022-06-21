@@ -23,7 +23,7 @@ const FabricOptions = () => {
       <Helmet>
         <title>{'Дефекты ткани | Параметры ткани'}</title>
       </Helmet>
-      <Link className="options__linkBack" to={'/'}>
+      <Link className="options__linkBack" to={'/fabric_defects'}>
         <img src={clear} alt='Закрыть' />
       </Link>
       <h1 className="options__heading">Введите параметры ткани</h1>

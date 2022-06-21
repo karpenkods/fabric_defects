@@ -13,7 +13,7 @@ const Examination = () => {
       <Helmet>
         <title>{'Дефекты ткани | Прокрутка рулона и запись'}</title>
       </Helmet>
-      <Link className="exam__linkBack" to={'/'}>
+      <Link className="exam__linkBack" to={'/fabric_defects'}>
       <img src={clear} alt='Закрыть' />
       </Link>
       <Link className="exam__linkForward" to={'/scan_results'}>
