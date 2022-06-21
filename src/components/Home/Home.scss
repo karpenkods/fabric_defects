@@ -1,0 +1,23 @@
+@import '../../index.scss';
+
+.home {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__buttonNew {
+    padding: 10px 22px;
+    letter-spacing: 0.0357143em;
+  }
+
+  &__linkChecks {
+    color: $colorBlack;
+    text-decoration-line: underline;
+  }
+
+  &__link {
+    margin-bottom: 30px;
+  }
+}

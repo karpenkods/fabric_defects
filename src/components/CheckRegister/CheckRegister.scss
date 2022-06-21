@@ -1,0 +1,29 @@
+@import '../../index.scss';
+
+.check {
+  display: flex;
+  padding: 50px 85px;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  background-color: $colorWhite;
+
+  &__linkBlock {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  &__linkBack {
+    color: $colorText;
+    text-decoration-line: underline;
+  }
+
+  &__heading {
+    margin-bottom: 25px;
+    color: $colorBlack;
+    font-weight: 400;
+  }
+}
