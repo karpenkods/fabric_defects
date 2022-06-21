@@ -31,8 +31,8 @@ const FabricOptionsAgain = () => {
           disableSwap
           sx={{
             '& .MuiSlider-thumb': {
-              width: '10%',
-              height: '100%',
+              width: '30px',
+              height: '30px',
               color: '#5d5d5d',
             },
             '& .MuiSlider-valueLabelLabel': {
