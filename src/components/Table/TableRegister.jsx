@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -37,14 +38,17 @@ export const TableRegister = () => {
     requestSearch(searched)
   }
 
+  const navigate = useNavigate();
+  const navigateTo = () => navigate('/scan_results')
+
   return (
     <TableContainer
-    sx={{
-      '& .MuiPaper-root': {
-        border: '1px solid rgba(0, 0, 0, 0.15)',
-        borderRadius: 0
-      },
-    }}
+      sx={{
+        '& .MuiPaper-root': {
+          border: '1px solid rgba(0, 0, 0, 0.15)',
+          borderRadius: 0,
+        },
+      }}
     >
       <SearchBar
         placeholder="Поиск"
@@ -66,11 +70,9 @@ export const TableRegister = () => {
           }}
         >
           <TableRow>
-          <TableCell padding="checkbox">
-          <Checkbox
-            inputProps={{ "aria-label": "select all desserts" }}
-          />
-        </TableCell>
+            <TableCell padding="checkbox">
+              <Checkbox inputProps={{ 'aria-label': 'select all desserts' }} />
+            </TableCell>
             <TableCell align="left">ID</TableCell>
             <TableCell align="left">Название ткани</TableCell>
             <TableCell align="left">№ цвет/рисунок</TableCell>
@@ -90,16 +92,21 @@ export const TableRegister = () => {
             },
             '& .MuiTableRow-root': {
               border: '1px solid rgba(0, 0, 0, 0.15)',
+              cursor: 'pointer'
             },
           }}
         >
           {register.map((row, index) => (
-            <TableRow key={index}>
+            <TableRow
+              key={index}
+              hover
+              onClick={navigateTo}
+            >
               <TableCell padding="checkbox">
-          <Checkbox
-            inputProps={{ "aria-label": "select all desserts" }}
-          />
-        </TableCell>
+                <Checkbox
+                  inputProps={{ 'aria-label': 'select all desserts' }}
+                />
+              </TableCell>
               <TableCell align="left">{row.id}</TableCell>
               <TableCell align="left">{row.name}</TableCell>
               <TableCell align="left">{row.number}</TableCell>
