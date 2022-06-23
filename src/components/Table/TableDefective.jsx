@@ -6,6 +6,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 
 import { defective } from '../../api/getDefective'
+import './TableDefective.scss'
 
 export const TableDefective = () => {
   return (
@@ -32,11 +33,12 @@ export const TableDefective = () => {
           </TableRow>
         </TableHead>
         <TableBody
+          className="firefox"
           sx={{
             '& .MuiTableCell-root': {
               padding: '15px 0 10px 24px',
               color: 'rgba(0, 0, 0, 0.54)',
-              verticalAlign: 'top'
+              verticalAlign: 'top',
             },
             '& .MuiTableRow-root': {
               border: '1px solid rgba(0, 0, 0, 0.15)',
@@ -45,7 +47,7 @@ export const TableDefective = () => {
         >
           {defective.map((row, index) => (
             <TableRow key={index}>
-              <TableCell align="left" >{row.id}</TableCell>
+              <TableCell align="left">{row.id}</TableCell>
               <TableCell align="left">
                 <img alt="Фото ткани" src={row.photo} />
               </TableCell>
@@ -54,7 +56,11 @@ export const TableDefective = () => {
               </TableCell>
               <TableCell align="left">{row.class}</TableCell>
               <TableCell align="left">{row.size}</TableCell>
-              <TableCell align="left">{row.coordinatesH}<br />{row.coordinatesW}</TableCell>
+              <TableCell align="left">
+                {row.coordinatesH}
+                <br />
+                {row.coordinatesW}
+              </TableCell>
             </TableRow>
           ))}
         </TableBody>

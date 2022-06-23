@@ -6,8 +6,7 @@ const a = Math.ceil(Math.random() * 100)
 const b = a - Math.ceil(Math.random() * 2)
 const c = Math.ceil(Math.random() * 9)
 
-const ExaminationAgain
- = () => {
+const ExaminationAgain = () => {
   return (
     <div className="exam">
       <Helmet>
@@ -16,7 +15,9 @@ const ExaminationAgain
       <Link className="exam__linkForward" to={'/scan_results_again'}>
         Далее
       </Link>
-      <h1 className="exam__heading" style={{ fontWeight: 400 }}>ПРОВЕРЯЮ</h1>
+      <h1 className="exam__heading" style={{ fontWeight: 400 }}>
+        ПРОВЕРЯЮ
+      </h1>
       <div className="exam__block">
         <div className="exam__textUp">
           <p>
@@ -39,4 +40,3 @@ const ExaminationAgain
 }
 
 export default ExaminationAgain
-

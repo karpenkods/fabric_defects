@@ -20,7 +20,9 @@ const DefectiveCard = () => {
         <TableResult />
       </div>
       <TableDefective />
-        <p className="card__print" onClick={() => window.print()}>Отправить на печать</p>
+      <p className="card__print" onClick={() => window.print()}>
+        Отправить на печать
+      </p>
     </div>
   )
 }

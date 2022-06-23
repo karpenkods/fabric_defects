@@ -6,6 +6,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 
 import { results } from '../../api/getScanResults'
+import './TableDefective.scss'
 
 export const TableResult = () => {
   return (
@@ -32,6 +33,7 @@ export const TableResult = () => {
           </TableRow>
         </TableHead>
         <TableBody
+          className="firefox"
           sx={{
             '& .MuiTableCell-root': {
               padding: '0 0 0 24px',

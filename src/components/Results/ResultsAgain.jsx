@@ -28,7 +28,7 @@ const ResultsAgain = () => {
         </Link>
       </div>
       <TableResult />
-      <div className='res__links'>
+      <div className="res__links">
         <div className="res__linkDel" id="1">
           <Link className="res__linkCardAgain" to={'/defective_card'}>
             Дефектная карта / {a} чувствительности / найдено{' '}

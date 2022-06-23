@@ -24,7 +24,7 @@ const FabricOptions = () => {
         <title>{'Дефекты ткани | Параметры ткани'}</title>
       </Helmet>
       <Link className="options__linkBack" to={'/fabric_defects'}>
-        <img src={clear} alt='Закрыть' />
+        <img src={clear} alt="Закрыть" />
       </Link>
       <h1 className="options__heading">Введите параметры ткани</h1>
       <Box component="form" className="options__box">

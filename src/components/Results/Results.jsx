@@ -21,9 +21,7 @@ const Results = () => {
       <div className="res__buttonBlock">
         <h1 className="res__heading">Результаты сканирования</h1>
         <Link to={'/new_check_again'}>
-          <button className="res__buttonAgain">
-            ПРОВЕРИТЬ СНОВА
-          </button>
+          <button className="res__buttonAgain">ПРОВЕРИТЬ СНОВА</button>
         </Link>
       </div>
       <TableResult />

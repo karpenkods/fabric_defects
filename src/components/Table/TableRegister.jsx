@@ -38,7 +38,7 @@ export const TableRegister = () => {
     requestSearch(searched)
   }
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   const navigateTo = () => navigate('/scan_results')
 
   return (
@@ -92,16 +92,12 @@ export const TableRegister = () => {
             },
             '& .MuiTableRow-root': {
               border: '1px solid rgba(0, 0, 0, 0.15)',
-              cursor: 'pointer'
+              cursor: 'pointer',
             },
           }}
         >
           {register.map((row, index) => (
-            <TableRow
-              key={index}
-              hover
-              onClick={navigateTo}
-            >
+            <TableRow key={index} hover onClick={navigateTo}>
               <TableCell padding="checkbox">
                 <Checkbox
                   inputProps={{ 'aria-label': 'select all desserts' }}

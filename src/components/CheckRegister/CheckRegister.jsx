@@ -12,7 +12,7 @@ const CheckRegister = () => {
       </Helmet>
       <div className="check__linkBlock">
         <Link className="check__linkBack" to={'/fabric_defects'}>
-        <img src={clear} alt='Закрыть' />
+          <img src={clear} alt="Закрыть" />
         </Link>
       </div>
       <h1 className="check__heading">Реестр проверок</h1>
