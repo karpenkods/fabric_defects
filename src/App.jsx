@@ -16,7 +16,7 @@ const App = () => {
   return (
     <div className="container">
       <Routes>
-        <Route exact path="/fabric_defects" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/new_check" element={<FabricOptions />} />
         <Route exact path="/new_check_again" element={<FabricOptionsAgain />} />
         <Route exact path="/examination" element={<Examination />} />
