@@ -1,13 +1,30 @@
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import clear from '../../assets/img/clear.svg'
 import './Examination.scss'
 
-const a = Math.ceil(Math.random() * 100)
-const b = a - Math.ceil(Math.random() * 2)
-const c = Math.ceil(Math.random() * 9)
-
 const Examination = () => {
+  const [scan, setScan] = useState(0)
+  const [rec, setRec] = useState(0)
+  const [def, setDef] = useState(0)
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setScan(scan + 1)
+      setRec(rec + 0.95)
+      setDef(def + 0.05)
+    }, 1000)
+    if (scan === 100) {
+      return navigate('/scan_results')
+    }
+    return () => clearInterval(timer)
+  })
+
+  const recognize = Math.floor(rec)
+  const defective = Math.floor(def)
+
   return (
     <div className="exam">
       <Helmet>
@@ -24,16 +41,16 @@ const Examination = () => {
         <div className="exam__textUp">
           <p>
             Прокрученных метров: <br />
-            <span style={{ color: '#000' }}>{a}</span>
+            <span style={{ color: '#000' }}>{scan}</span>
           </p>
           <p>
             Распознанных метров: <br />
-            <span style={{ color: '#000' }}>{b}</span>
+            <span style={{ color: '#000' }}>{recognize}</span>
           </p>
         </div>
         <div className="exam__textDown">
           <p>
-            Количество брака <span style={{ color: '#000' }}>{c}</span>
+            Количество брака <span style={{ color: '#000' }}>{defective}</span>
           </p>
         </div>
       </div>
