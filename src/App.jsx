@@ -1,5 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
-import NotFound from './components/NotFound/NotFound'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import Home from './components/Home/Home'
 import FabricOptions from './components/FabricOptions/FabricOptions'
 import FabricOptionsAgain from './components/FabricOptions/FabricOptionsAgain'
@@ -26,7 +25,7 @@ const App = () => {
         <Route exact path="/scan_results" element={<Results />} />
         <Route exact path="/scan_results_again" element={<ResultsAgain />} />
         <Route exact path="/defective_card" element={<DefectiveCard />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </div>
   )
