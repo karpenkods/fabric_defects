@@ -1,24 +1,32 @@
 {
   "files": {
-    "main.css": "/fabric_defects/static/css/main.67063492.css",
-    "main.js": "/fabric_defects/static/js/main.3c03165c.js",
+    "main.css": "/fabric_defects/static/css/main.9ad75262.css",
+    "main.js": "/fabric_defects/static/js/main.1773fc65.js",
     "static/media/photo1.png": "/fabric_defects/static/media/photo1.ab6dd24214d7ff849bb1.png",
     "static/media/roboto-v30-cyrillic-500.woff": "/fabric_defects/static/media/roboto-v30-cyrillic-500.0ed33928e20de0916ad0.woff",
     "static/media/roboto-v29-latin_cyrillic-700.woff": "/fabric_defects/static/media/roboto-v29-latin_cyrillic-700.3b1c20c745bc4c9f1093.woff",
     "static/media/roboto-v29-latin_cyrillic-regular.woff": "/fabric_defects/static/media/roboto-v29-latin_cyrillic-regular.90fc8764675b01c9cc05.woff",
+    "static/media/photo4.png": "/fabric_defects/static/media/photo4.43d2b8ec64aede972e32.png",
+    "static/media/photo3.png": "/fabric_defects/static/media/photo3.a6272c846c58a4f3e887.png",
+    "static/media/photo5.png": "/fabric_defects/static/media/photo5.be8e7c5347fc26abc469.png",
+    "static/media/photo2.png": "/fabric_defects/static/media/photo2.dd7abafb873b1253606a.png",
     "static/media/roboto-v30-cyrillic-500.woff2": "/fabric_defects/static/media/roboto-v30-cyrillic-500.f8c0d3b58ab63c872fa1.woff2",
     "static/media/roboto-v29-latin_cyrillic-700.woff2": "/fabric_defects/static/media/roboto-v29-latin_cyrillic-700.4bdcfadc292241e3b817.woff2",
     "static/media/roboto-v29-latin_cyrillic-regular.woff2": "/fabric_defects/static/media/roboto-v29-latin_cyrillic-regular.91f689ac38236365183d.woff2",
-    "static/media/photo2.png": "/fabric_defects/static/media/photo2.4ea79c32369289b4cb10.png",
+    "static/media/photo1_1.png": "/fabric_defects/static/media/photo1_1.4ea79c32369289b4cb10.png",
+    "static/media/photo4_1.png": "/fabric_defects/static/media/photo4_1.1bfb35990683080ec3ea.png",
+    "static/media/photo2_1.png": "/fabric_defects/static/media/photo2_1.512707dc5191f793430c.png",
+    "static/media/photo3_1.png": "/fabric_defects/static/media/photo3_1.ee751ac4258b332efe1c.png",
+    "static/media/photo5_1.png": "/fabric_defects/static/media/photo5_1.55301bc568db1b3a9e7a.png",
     "index.html": "/fabric_defects/index.html",
     "static/media/play.svg": "/fabric_defects/static/media/play.e7c48795561afb33b69a358815edbcdb.svg",
     "static/media/delete.svg": "/fabric_defects/static/media/delete.f3da8cfacf19e91169df97e489bcf2e1.svg",
     "static/media/clear.svg": "/fabric_defects/static/media/clear.340a55cb5e6203757ffc1ccb43e1188b.svg",
-    "main.67063492.css.map": "/fabric_defects/static/css/main.67063492.css.map",
-    "main.3c03165c.js.map": "/fabric_defects/static/js/main.3c03165c.js.map"
+    "main.9ad75262.css.map": "/fabric_defects/static/css/main.9ad75262.css.map",
+    "main.1773fc65.js.map": "/fabric_defects/static/js/main.1773fc65.js.map"
   },
   "entrypoints": [
-    "static/css/main.67063492.css",
-    "static/js/main.3c03165c.js"
+    "static/css/main.9ad75262.css",
+    "static/js/main.1773fc65.js"
   ]
 }
