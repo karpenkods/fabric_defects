@@ -7,6 +7,7 @@ import TableContainer from '@mui/material/TableContainer'
 import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Checkbox from '@mui/material/Checkbox'
+
 import SearchBar from 'material-ui-search-bar'
 
 import { register } from '../../api/getRegisterOfChecks'

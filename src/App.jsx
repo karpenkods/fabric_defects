@@ -1,4 +1,5 @@
 import { Routes, Route, Navigate } from 'react-router-dom'
+
 import Home from './components/Home/Home'
 import FabricOptions from './components/FabricOptions/FabricOptions'
 import FabricOptionsAgain from './components/FabricOptions/FabricOptionsAgain'
@@ -9,6 +10,7 @@ import Results from './components/Results/Results'
 import ResultsAgain from './components/Results/ResultsAgain'
 import CheckRegister from './components/CheckRegister/CheckRegister'
 import DefectiveCard from './components/DefectiveCard/DefectiveCard'
+
 import './index.scss'
 
 const App = () => {

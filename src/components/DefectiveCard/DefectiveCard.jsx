@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+
 import { TableResult } from '../Table/TableResults'
 import { TableDefective } from '../Table/TableDefective'
+
 import clear from '../../assets/img/clear.svg'
+
 import './DefectiveCard.scss'
 
 const DefectiveCard = () => {

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+
 import { TableRegister } from '../Table/TableRegister'
+
 import clear from '../../assets/img/clear.svg'
+
 import './CheckRegister.scss'
 
 const CheckRegister = () => {

@@ -1,13 +1,17 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import { useSelector } from 'react-redux/es/exports'
+
 import { TableResult } from '../Table/TableResults'
+
 import play from '../../assets/img/play.svg'
+
 import './Results.scss'
 
-const a = Math.ceil(Math.random() * 100)
-const c = Math.ceil(Math.random() * 9)
-
 const Results = () => {
+  const sensitivity = useSelector((store) => store.options.clothSensitivity)
+  const defects = useSelector((store) => store.options.defect)
+
   return (
     <div className="res">
       <Helmet>
@@ -26,8 +30,8 @@ const Results = () => {
       </div>
       <TableResult />
       <Link className="res__linkCard" to={'/defective_card'}>
-        Дефектная карта / {a} чувствительности / найдено{' '}
-        <span className="res__number">{c}</span> дефектов
+        Дефектная карта / {sensitivity} чувствительности / найдено{' '}
+        <span className="res__number">{defects}</span> дефектов
       </Link>
       <div className="res__videoBlock">
         <div className="res__img">

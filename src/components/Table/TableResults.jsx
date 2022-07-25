@@ -1,3 +1,5 @@
+import { useSelector } from 'react-redux/es/exports'
+
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
 import TableCell from '@mui/material/TableCell'
@@ -6,9 +8,13 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 
 import { results } from '../../api/getScanResults'
+
 import './TableDefective.scss'
 
 export const TableResult = () => {
+  const id = useSelector((store) => store.options.clothId)
+  const name = useSelector((store) => store.options.clothName)
+
   return (
     <TableContainer>
       <Table>
@@ -47,8 +53,8 @@ export const TableResult = () => {
         >
           {results.map((row) => (
             <TableRow key={row.name}>
-              <TableCell align="left">{row.id}</TableCell>
-              <TableCell align="left">{row.name}</TableCell>
+              <TableCell align="left">{id}</TableCell>
+              <TableCell align="left">{name}</TableCell>
               <TableCell align="left">{row.article}</TableCell>
               <TableCell align="left">{row.number}</TableCell>
               <TableCell align="left">{row.length}</TableCell>

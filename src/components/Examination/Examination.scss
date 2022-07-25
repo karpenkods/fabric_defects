@@ -1,5 +1,12 @@
 @import '../../index.scss';
 
+.examination {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .exam {
   position: relative;
   display: -webkit-box;
@@ -12,6 +19,7 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin-bottom: 50px;
   padding: 30px 40px;
   width: 432px;
   height: 184px;
@@ -72,5 +80,57 @@
     -ms-flex-pack: end;
     justify-content: flex-end;
     padding-right: 20px;
+  }
+}
+
+.conf {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 50px;
+  padding: 30px 40px;
+  width: 432px;
+  background-color: $colorWhite;
+  border-radius: 6px;
+
+  &__images {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  &__btn {
+    width: 65%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btnYes {
+    height: 36px;
+    width: 100px;
+    background-color: #4caf50;
+    transition: 0.3s;
+    &:hover {
+      background-color: #43a047;
+    }
+  }
+
+  &__btnNo {
+    height: 36px;
+    width: 100px;
+    background-color: #f44336;
+    transition: 0.3s;
+    &:hover {
+      background-color: #e53935;
+    }
   }
 }

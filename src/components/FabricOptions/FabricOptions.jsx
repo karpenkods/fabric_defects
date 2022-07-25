@@ -1,9 +1,20 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux/es/exports'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+
 import Box from '@mui/material/Box'
 import Input from '@mui/material/Input'
 import Slider from '@mui/material/Slider'
+
+import {
+  inputId,
+  inputName,
+  inputSensitivity,
+} from '../../redux/reducers/options'
+
 import clear from '../../assets/img/clear.svg'
+
 import './FabricOptions.scss'
 
 const marks = [
@@ -18,6 +29,17 @@ const marks = [
 ]
 
 const FabricOptions = () => {
+  const dispatch = useDispatch()
+  const [id, setId] = useState(null)
+  const [name, setName] = useState('')
+  const [sensitivity, setSensitivity] = useState(50)
+
+  const handleChange = () => {
+    dispatch(inputId(id))
+    dispatch(inputName(name))
+    dispatch(inputSensitivity(sensitivity))
+  }
+
   return (
     <div className="options">
       <Helmet>
@@ -32,6 +54,8 @@ const FabricOptions = () => {
           placeholder="ID"
           disableUnderline={true}
           type="number"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
           style={{
             width: '100%',
             height: 36,
@@ -44,6 +68,8 @@ const FabricOptions = () => {
         <Input
           placeholder="Название ткани"
           disableUnderline={true}
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           style={{
             width: '100%',
             height: 36,
@@ -55,10 +81,11 @@ const FabricOptions = () => {
         />
         <p className="options__text">Установите порог чувствительности</p>
         <Slider
-          defaultValue={50}
           step={1}
           marks={marks}
           valueLabelDisplay="on"
+          value={sensitivity}
+          onChange={(e) => setSensitivity(e.target.value)}
           disableSwap
           sx={{
             '& .MuiSlider-thumb': {
@@ -82,9 +109,24 @@ const FabricOptions = () => {
           }}
         />
         <Link className="options__link" to={'/examination'}>
-          <button type="submit" className="options__buttonExam">
-            НАЧАТЬ ПРОВЕРКУ
-          </button>
+          {name !== '' && id !== null ? (
+            <button
+              type="submit"
+              className="options__buttonExam"
+              onClick={handleChange}
+            >
+              НАЧАТЬ ПРОВЕРКУ
+            </button>
+          ) : (
+            <button
+              disabled
+              type="submit"
+              className="options__buttonExam disabled"
+              onClick={handleChange}
+            >
+              НАЧАТЬ ПРОВЕРКУ
+            </button>
+          )}
         </Link>
       </Box>
     </div>

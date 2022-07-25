@@ -1,7 +1,13 @@
+import { useState } from 'react'
+import { useDispatch } from 'react-redux/es/exports'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+
 import Box from '@mui/material/Box'
 import Slider from '@mui/material/Slider'
+
+import { inputSensitivityAgain } from '../../redux/reducers/options'
+
 import './FabricOptions.scss'
 
 const marks = [
@@ -16,6 +22,12 @@ const marks = [
 ]
 
 const FabricOptionsAgain = () => {
+  const dispatch = useDispatch()
+  const [sensitivityAgain, setSensitivityAgain] = useState(50)
+
+  const handleChange = () => {
+    dispatch(inputSensitivityAgain(sensitivityAgain))
+  }
   return (
     <div className="options__again">
       <Helmet>
@@ -27,6 +39,8 @@ const FabricOptionsAgain = () => {
           defaultValue={50}
           step={1}
           marks={marks}
+          value={sensitivityAgain}
+          onChange={(e) => setSensitivityAgain(e.target.value)}
           valueLabelDisplay="on"
           disableSwap
           sx={{
@@ -51,7 +65,11 @@ const FabricOptionsAgain = () => {
           }}
         />
         <Link className="options__link" to={'/examination_again'}>
-          <button type="submit" className="options__buttonExam">
+          <button
+            type="submit"
+            className="options__buttonExam"
+            onClick={handleChange}
+          >
             НАЧАТЬ ПРОВЕРКУ
           </button>
         </Link>

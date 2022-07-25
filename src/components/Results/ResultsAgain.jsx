@@ -1,16 +1,19 @@
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 import { TableResult } from '../Table/TableResults'
+import { useSelector } from 'react-redux/es/exports'
 import del from '../../assets/img/delete.svg'
 import play from '../../assets/img/play.svg'
 import './Results.scss'
 
-const a = Math.ceil(Math.random() * 100)
-const b = Math.ceil(Math.random() * 100)
-const c = Math.ceil(Math.random() * 9)
-const d = Math.ceil(Math.random() * 9)
-
 const ResultsAgain = () => {
+  const sensitivity = useSelector((store) => store.options.clothSensitivity)
+  const sensitivityAgain = useSelector(
+    (store) => store.options.clothSensitivityAgain,
+  )
+  const defects = useSelector((store) => store.options.defect)
+  const defectsAgain = useSelector((store) => store.options.defectAgain)
+
   return (
     <div className="res">
       <Helmet>
@@ -31,8 +34,8 @@ const ResultsAgain = () => {
       <div className="res__links">
         <div className="res__linkDel" id="1">
           <Link className="res__linkCardAgain" to={'/defective_card'}>
-            Дефектная карта / {a} чувствительности / найдено{' '}
-            <span className="res__number">{c}</span> дефектов
+            Дефектная карта / {sensitivity} чувствительности / найдено{' '}
+            <span className="res__number">{defects}</span> дефектов
           </Link>
           <img
             onClick={() => {
@@ -47,8 +50,8 @@ const ResultsAgain = () => {
         </div>
         <div className="res__linkDel" id="2">
           <Link className="res__linkCardAgain" to={'/defective_card'}>
-            Дефектная карта / {b} чувствительности / найдено{' '}
-            <span className="res__number">{d}</span> дефектов
+            Дефектная карта / {sensitivityAgain} чувствительности / найдено{' '}
+            <span className="res__number">{defectsAgain}</span> дефектов
           </Link>
           <img
             onClick={() => {

@@ -6,6 +6,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 
 import { defective } from '../../api/getDefective'
+
 import './TableDefective.scss'
 
 export const TableDefective = () => {
